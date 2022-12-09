@@ -1,6 +1,7 @@
 let seconds = 60 * 1000; //javascript counts seconds in miliseconds
 let timer;
 let btn = document.getElementById('start');
+let timeDisplay = document.getElementById('timer');
 
 function startTime() {
   
@@ -12,7 +13,7 @@ function startTime() {
   //makes the timer go down by 1 second at a time (1000 miliseconds)
   seconds -= 1000;
   //displays the counting down timer
-  document.getElementById('timer').innerHTML = `0:${seconds}`;
+  timeDisplay.innerHTML = `0:${seconds}`;
   
   //stops the timer at 0 and alerts 'nice'
   if(seconds <= 999){
